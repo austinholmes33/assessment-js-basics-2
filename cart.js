@@ -35,11 +35,11 @@ const cart = [
 
 //CODE HERE
 
-const cartSum = cart.reduce(function(acc, value) {
+const cartTotal = cart.reduce(function(acc, value) {
     return acc + value.price
 }, 0)
 
-//console.log(cartSum)
+//console.log(cartTotal)
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -62,8 +62,12 @@ const cartSum = cart.reduce(function(acc, value) {
 //CODE HERE
 
 function calcFinalPrice(cartTotal, couponValue, tax) {
-    return 
+    return (cartTotal + (cartTotal * tax)) - couponValue
 }
+
+calcFinalPrice(26.97, 3 ,0.06)
+//console.log(calcFinalPrice(26.97, 3, 0.06))
+
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -88,6 +92,8 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 /*
     TEXT ANSWER HERE
 
+We would need to know their name, if they are hungry, what their favorite food and favorite drink is, in order to properly serve them
+
 */
 
 /*
@@ -96,3 +102,11 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 */
 
 //CODE HERE
+
+const customer {
+    hungry: true,
+    name: 'john',
+    favFood: 'burger',
+    favDrink: 'soda',
+}
+
