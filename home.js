@@ -145,3 +145,6 @@ console.log(newDeal)
 */
 
 //CODE HERE
+
+const newDealCont = deals.replace(deals => (deals.desc, 'This deal lasts until the end of April!'))
+console.log (newDealCont)

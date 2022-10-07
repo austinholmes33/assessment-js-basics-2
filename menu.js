@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+let pizza = {
+    name : 'cheese',
+    price: 10,
+    category: 'entree',
+    popularity: 8,
+    rating : 7,
+    tags : ['vegetarian', 'kids', 'gluten-free'],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,8 @@
 
 //CODE HERE
 
+console.log(pizza.popularity)
+
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +64,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,6 +74,9 @@
 */
 
 //CODE HERE
+
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -74,6 +88,8 @@
 
 //CODE HERE
 
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -90,6 +106,42 @@
 //CODE HERE
 
 
+foodArr = [
+    {name : 'pepperoni',
+    price: 12,
+    category: 'entree',
+    popularity: 9,
+    rating : 6,
+    tags : ['spicy', 'kids', 'gluten-free'],
+    },
+    {name : 'buffalo chicken',
+    price: 10,
+    category: 'entree',
+    popularity: 8,
+    rating : 7,
+    tags : ['size', 'kids', 'gluten-free'],
+    },
+    {name : 'italian sausage',
+    price: 15,
+    category: 'entree',
+    popularity: 10,
+    rating : 9,
+    tags : ['taste', 'kids', 'gluten-free'],
+    },
+    {name : 'mushroom',
+    price: 12,
+    category: 'entree',
+    popularity: 6,
+    rating : 6,
+    tags : ['vegan', 'kids', 'gluten-free'],
+    },
+    {name : 'pepper',
+    price: 11,
+    category: 'entree',
+    popularity: 5,
+    rating : 3,
+    tags : ['edible', 'elderly', 'gluten-free'],}
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +157,13 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(arr, tags, callback) {
+    for(i=0; i < foodArr.length; i++) {
+        if(foodArr[i].price === 12) {
+            return foodArr[i]
+        }
+    }
+}
 
 
 
@@ -150,6 +208,9 @@
 
 //CODE HERE
 
+function filterByProperty(property, number, type) {
+    let newArr = foodArr.filter()
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +220,5 @@
 */
 
 //CODE HERE
+
+filterByProperty()
