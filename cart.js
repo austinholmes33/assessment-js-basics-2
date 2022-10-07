@@ -103,7 +103,7 @@ We would need to know their name, if they are hungry, what their favorite food a
 
 //CODE HERE
 
-const customer {
+const customer = {
     hungry: true,
     name: 'john',
     favFood: 'burger',
