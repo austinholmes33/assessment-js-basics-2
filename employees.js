@@ -26,8 +26,8 @@ class Employee {
         this.name = name;
         this.shifts = shifts;
         
-    } getSchedule(name, shifts) {
-        console.log(name, 'works on', shifts)
+    } getSchedule() {
+        console.log(`${this.name}, works on, ${this.shifts}`)
     }
 }
 
@@ -70,6 +70,7 @@ empOne.getSchedule()
 //CODE HERE
 
 const empTwo = {...empOne}
+console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -97,13 +98,13 @@ const empTwo = {...empOne}
 //CODE HERE
 
 class Manager extends Employee {
-    constructor(name, shifts, [employees]) {
+    constructor(name, shifts, employees) {
         super(name, shifts)
-        this.employees = [employees]
+        this.employees = employees
     } getEmployees() {
-        console.log(this.name, 'manages', this.employees)
+        console.log(`${this.name}, manages, ${this.employees}`)
     } addEmployee(emp) {
-        employees.push(emp)
+        this.employees.push(emp)
     }
 }
 
@@ -129,7 +130,7 @@ const manager = new Manager('Winston', 'weekday mornings, weekday afternoons', '
 
 //CODE HERE
 
-getEmployees(manager)
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -139,7 +140,7 @@ getEmployees(manager)
 
 //CODE HERE 
 
-addEmployee(manager, 'Coach')
+manager.addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
@@ -149,4 +150,4 @@ addEmployee(manager, 'Coach')
 
 //CODE HERE
 
-getEmployees(manager)
+manager.getEmployees()
